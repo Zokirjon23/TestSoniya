@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainScreen"
+    android:id="@+id/nav_graph.xml">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.testsoniya.ui.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.testsoniya.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="item_data"
+            app:argType="com.example.testsoniya.data.model.Result" />
+    </fragment>
+</navigation>

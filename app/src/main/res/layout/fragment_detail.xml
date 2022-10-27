@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.DetailFragment">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatar"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:srcCompat="@drawable/ic_launcher_background"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/avatar"
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/name"
+                app:layout_constraintTop_toTopOf="@id/name_text"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/name_text" />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_text"
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/status"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/status_text" />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/status"
+                android:id="@+id/specie_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Species:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/specie"
+                app:layout_constraintTop_toBottomOf="@id/status_text"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Species"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/specie_text" />
+
+             <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/specie_text"
+                android:id="@+id/type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/type"
+                app:layout_constraintTop_toBottomOf="@id/specie"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/type_text" />
+
+             <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/type_text"
+                android:id="@+id/gender_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gander:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/gender"
+                app:layout_constraintTop_toBottomOf="@id/type"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/gender_text" />
+
+             <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gender_text"
+                android:id="@+id/origin_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Origin name:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/origin_name"
+                app:layout_constraintTop_toBottomOf="@id/gender"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Origin name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:autoLink="web"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/origin_name_text" />
+
+             <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/origin_name_text"
+                android:id="@+id/origin_url_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Origin url:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/origin_url"
+                app:layout_constraintTop_toBottomOf="@id/origin_name"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Origin url"
+                android:autoLink="web"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/origin_url_text" />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/origin_url_text"
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location name:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/location"
+                app:layout_constraintTop_toBottomOf="@id/origin_url"
+                android:gravity="end"
+                android:autoLink="web"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/location_text" />
+
+           <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/location_text"
+                android:id="@+id/location_url_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location url:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/location_url"
+                app:layout_constraintTop_toBottomOf="@id/location"
+                android:gravity="end"
+                android:autoLink="web"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/location_url_name" />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/location_url_name"
+                android:id="@+id/created_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created name:"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/created"
+                app:layout_constraintTop_toBottomOf="@id/location_url"
+                android:gravity="end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="created"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/created_text" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/episode_list"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/created_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
